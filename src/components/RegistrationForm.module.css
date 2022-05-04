@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 88%;
+    width: 100%;
+    padding: 1em;
+}
+
+.container > * {
+    width: 60%;
+}
+
+.button {
+    margin: 10px 0;
+}

@@ -1,0 +1,17 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    box-sizing: border-box;
+}
+
+.modalContainer {
+    width: 500px;
+    height: 450px;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
