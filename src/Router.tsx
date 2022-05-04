@@ -7,8 +7,8 @@ import { Registration } from "./pages/Registration";
 export const Router: React.FC<any> = () => {
     return <BrowserRouter>
         <Routes>
-            <Route path={buildRouterLink("registration")} element={<Registration />} />
-            <Route path={buildRouterLink("login")} element={<span>login</span>} />
+            <Route path={buildRouterLink("/registration")} element={<Registration />} />
+            <Route path={buildRouterLink("/login")} element={<span>login</span>} />
         </Routes>
     </BrowserRouter>
 }
