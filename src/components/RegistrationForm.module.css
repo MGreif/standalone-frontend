@@ -3,15 +3,17 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    height: 88%;
+    height: 100%;
     width: 100%;
     padding: 1em;
+    box-sizing: border-box;
 }
 
 .container > * {
-    width: 60%;
+    width: 80%;
 }
 
 .button {
-    margin: 10px 0;
+    margin-top: 1em;
+    width: 30%;
 }

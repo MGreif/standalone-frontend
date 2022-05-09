@@ -1,11 +1,9 @@
 import React from "react";
 import { RegistrationForm } from "../components/RegistrationForm";
-import classes from './Registration.module.css'
+import {ModalLayout} from "../layout/ModalLayout";
 
 export const Registration: React.FC<any> = () => {
-    return <div className={classes.container}>
-        <div className={classes.modalContainer}>
+    return <ModalLayout>
             <RegistrationForm />
-        </div>
-    </div>
+    </ModalLayout>
 }
