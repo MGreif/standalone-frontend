@@ -11,5 +11,5 @@ export const createUser = (data: {[key: string]: string}) => {
 export const login = (data: { username: string, password: string }) => {
   const url = buildApiLink(authServicePath + '/login')
   console.log(url)
-  return superagent.post(url).send(data)
+  return superagent.post(url).send(data).withCredentials()
 }
