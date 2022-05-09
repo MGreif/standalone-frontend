@@ -1,7 +1,8 @@
 import {ModalLayout} from "../layout/ModalLayout";
+import { LoginForm } from "../components/LoginForm";
 
 export const Login: React.FC<any> = () => {
     return <ModalLayout>
-        <h1>Login</h1>
+        <LoginForm />
     </ModalLayout>
 }
