@@ -37,9 +37,9 @@ export const LoginForm: React.FC<any> = () => {
                 <Input onChange={handleChange} name="username"></Input>
             </InputWrapper>
             <InputWrapper label="Password">
-                <Input onChange={handleChange} name="password"></Input>
+                <Input onChange={handleChange} name="password" type="password"></Input>
             </InputWrapper>
-            <Button onClick={handleClick} className={classes.button}>Register</Button>
+            <Button onClick={handleClick} className={classes.button}>Login</Button>
         </div>
     )
 }
