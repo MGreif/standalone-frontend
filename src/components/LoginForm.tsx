@@ -1,5 +1,6 @@
 import { Button, Input, InputWrapper } from '@mantine/core'
 import React, { useState } from 'react'
+import { useLocation } from 'react-router'
 import { createUser, login } from '../gateway/user'
 import classes from './RegistrationForm.module.css'
 
@@ -9,6 +10,11 @@ type TFormState = {
 
 export const LoginForm: React.FC<any> = () => {
     const [values, setValues] = useState<TFormState>({})
+    const { search } = useLocation();
+
+    const searchParams = React.useMemo(() => new URLSearchParams(search), [search]);
+
+    const redirectionURL = searchParams.get('redirect_to')
 
 
     const handleChange = (e: any) => {
@@ -16,7 +22,12 @@ export const LoginForm: React.FC<any> = () => {
     }
 
     const handleClick = () => {
-       login({ username: values.username, password: values.password }).then(res => console.log(res))
+       login({ username: values.username, password: values.password }).then(res => {
+         if (redirectionURL?.match(/^(http(s)?:\/\/)?(frontend.greif.me|localhost)(.*)$/)) {
+           console.log(redirectionURL)
+           window.location.href = redirectionURL
+         }
+       })
     }
 
     return (
